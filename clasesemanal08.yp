@@ -1,0 +1,21 @@
+historial = []
+while True:
+    opcion = input("Por favor Ingrese una pagina web o escriba 'Atras' o 'Salir': ")
+
+    if opcion.lower() == "salir": 
+        print("Saliendo del programa....")
+        break
+    elif opcion.lower() == "atras":
+        if len(historial)>0:
+            atras = historial.pop()
+            print("Se elimino: ", atras)
+            print("Historial: ", historial)
+            print("")
+        else: 
+            print("No hay ningun historial...")
+            print("")
+    else: 
+        historial.append(opcion)
+        print("Pagina visitada: ", opcion)  
+        print("Historial: ", historial)
+        print("")
